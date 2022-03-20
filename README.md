@@ -1,1 +1,3 @@
-# four-cards-feature-section from frontendmentor
+# four-cards-feature-section
+
+A frontend mentor challenge
