@@ -1,0 +1,148 @@
+@import"_config.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(very-light-gray);
+}
+.container{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 50px;
+}
+.desc{
+    color: var(--grayish-blue);
+}
+img{
+    max-width: 100%;
+}
+.first-section{
+    text-align: center;
+    margin-bottom: 4em;
+    
+    .title{
+        margin-bottom: 1em;
+        color: var(--very-dark-blue);
+        font-size: 1.6em;
+
+        .title-1{
+            font-weight: 200;
+        }
+    }
+    .title__desc{
+        width: 50%;
+        margin: 0 auto;
+        font-size: 0.9125em;
+    }
+}
+.grid{
+    display: grid;
+}
+.feature{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5em;
+    align-items: center;
+    place-items: center;
+
+    &__title{
+        font-size: 1.4em;
+        color: var(--very-dark-blue);
+        font-weight: 700;
+    }
+    &__desc{
+        font-size: 0.8125em;
+        line-height: 1.8;
+        margin: 1em 0 3em;
+    }
+    &__img{
+        display: flex;
+        margin-left: auto;
+        width: 60px;
+    }
+}
+.card{
+    background-color: #fff;
+    box-shadow: 0 12px 15px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    padding: 30px;
+    max-width: 320px;
+}
+
+.two-cards{
+    row-gap: 1.5em;
+}
+.card-1{
+    border-top: 4px solid var(--cyan);
+}
+.card-2{
+    border-top: 4px solid var(--red);
+}
+.card-3{
+    border-top: 4px solid var(--orange);
+}
+.card-4{
+    border-top: 4px solid var(--blue);
+}
+
+@media screen and (max-width: 968px){
+    .first-section{
+        margin-bottom: 3.5em;
+        .title{
+            &__desc{
+                width: 60%;
+            }
+        }
+    }
+    .feature{
+        grid-template-columns: 1fr;
+        row-gap: 1.5em;
+    }
+}
+
+@media screen and (max-width: 568px){
+    body{
+        font-size: 14px;
+    }
+    .container{
+        padding: 50px 20px;
+    }
+    .first-section{
+        margin-bottom: 3em;
+        
+        .title{
+            font-size: 1.2em;
+
+            &__desc{
+                width: 100%;
+                font-size: 1em;
+            }
+        }
+    }
+    .feature{
+        &__title{
+            font-size: 1.4em;
+        }
+        &__desc{
+            font-size: 0.875em;
+            margin: 0.5em 0 2em;
+        }
+    }
+}
+@media screen and (max-width: 300px){
+    body{
+        font-size: 10px;
+    }
+    .first-section{
+
+        .title{
+            font-size: 1.3em;
+        }
+    }
+}
